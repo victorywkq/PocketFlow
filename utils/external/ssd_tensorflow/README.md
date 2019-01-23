@@ -32,6 +32,7 @@ There are already some TensorFlow based SSD reimplementation codes on GitHub, th
 		   |    |->...
 	```
 	VOCROOT is your path of the Pascal VOC Dataset.
+	The directory of VOCROOT should be set below of the ssd_tensorflow(not the root of Pocketflow).The file of convert_dataset.py should rewrite the as :tf.app.flags.DEFINE_string('dataset_directory', './VOCROOT','All datas directory')
 - Run the following script to generate TFRecords.
 	```sh
 	python dataset/convert_tfrecords.py --dataset_directory=VOCROOT --output_directory=./dataset/tfrecords
